@@ -10,7 +10,7 @@ const App = () => {
           <Button />
         </div>
         <div className=" ml-4">
-          <img src="src\assets\Cuck Noris Jokes.png" height="" width="400" />
+          <img src="src\Components\Cuck Noris Jokes.png" height="" width="400" />
         </div>
       </div>
     </div>
