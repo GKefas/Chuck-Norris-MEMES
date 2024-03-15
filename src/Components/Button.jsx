@@ -1,14 +1,5 @@
 import  { Component } from "react";
 
-const getData = async function () {
-  try {
-    const response = await fetch('https://api.chucknorris.io/jokes/random');
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    return 'Something Occured with Server!\nTry Again Later!';
-  }
-}
 
 class Button extends Component {
 
@@ -21,9 +12,15 @@ class Button extends Component {
   }
 
   async GetJoke() {
-    const joke = await getData();
-    this.setState({ joke: joke.value });
+    try {
+      const response = await fetch('https://api.chucknorris.io/jokes/random');
+      const data = await response.json();
+      this.setState({joke:data.value});
+    } catch (error) {
+      this.setState({joke : 'Something Occured with Server!\nTry Again Later!'});
+    }
   }
+
 
   render() {
     return (

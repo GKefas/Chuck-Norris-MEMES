@@ -5,11 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'Chuck-Norris-Img':"url('/src/assets/Cuck Noris Jokes.png')"
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
